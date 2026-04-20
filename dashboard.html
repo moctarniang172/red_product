@@ -13,21 +13,6 @@
      <!-- SIDEBAR -->
   <div class="bg-[#4c5053] w-[250px] h-screen  fixed left-0 top-0 z-50 hidden md:block" id="sidbare">
 
-    <!-- <div class="m-4 flex text-white gap-4 mt-2">
-      <span class="inline-block w-[22px] h-[26px] bg-white mr-2 
-      [clip-path:polygon(0%_0%,100%_0%,100%_100%,50%_78%,0%_100%)]"></span>
-      <h1>RED PRODUCT</h1>
-    </div> -->
-
-     <!-- <ul class="w-full text-center space-y-4">
-      <li class="text-xl text-white hover:bg-white hover:text-black p-2 rounded">
-        <a href="dashboard.html" class="nav-link block w-full h-full">dashboard</a></li>
-
-      <li class="text-xl text-white hover:bg-white hover:text-black p-2 rounded">
-        <a href="index.html" class="nav-link block w-full h-full">liste des hotels</a>
-      </li>
-      
-    </ul> -->
     <div id="enligne"></div>
   </div>
         <!-- section 1 bare de navigation de la page connexion, inscription,et page mdp oblier -->
@@ -35,37 +20,52 @@
       
 
   
-  <div class="px-4 flex justify-between items-center h-[70px] shadow-md">
-   <i class="fa-solid fa-align-justify  md:hidden cursor-pointer" onclick="clique()"></i>
+  <div class="px-4 flex justify-between items-center h-[70px] shadow-md relative">
 
+  <!-- Hamburger (mobile uniquement) -->
+  <i class="fa-solid fa-align-justify md:hidden cursor-pointer" onclick="clique()"></i>
 
-    <div id="logo" class="hidden text-2xl font-bold text-black md:block">Dashboard</div>
+  <!-- Logo (desktop uniquement) -->
+  <div id="logo" class="hidden text-2xl font-bold text-black md:block">Dashboard</div>
 
-    <nav class="flex items-center gap-8">
+  <nav class="flex items-center gap-4 md:gap-8">
 
-      
-      <div class="flex relative w-[300px] h-[40px]">
-        <i class="fa-solid fa-magnifying-glass absolute left-3 top-3"></i>
-        <input type="text" placeholder="rechercher" class="bg-[#f5f5f5] w-full pl-10 rounded-full">
+    <!-- Icône loupe sur mobile, barre complète sur desktop -->
+    <button
+      class="md:hidden text-gray-600"
+      onclick="document.getElementById('search-bar').classList.toggle('hidden')">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+
+    <div class="hidden md:flex relative w-[300px] h-[40px]">
+      <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-gray-400"></i>
+      <input
+        type="text"
+        placeholder="rechercher"
+        class="bg-[#f5f5f5] w-full pl-10 rounded-full outline-none"
+      >
+    </div>
+
+    <!-- Icônes droite -->
+    <div class="flex items-center gap-3 md:gap-4">
+      <i class="fa-regular fa-bell"></i>
+
+      <div class="relative w-10 h-10 flex-shrink-0">
+        <i class="fa-solid fa-circle-user text-4xl text-white"></i>
+        <img
+          src="images/moctar.jpg"
+          alt="photo"
+          class="absolute inset-0 w-10 h-10 rounded-full object-cover"
+        >
       </div>
 
-      
-      <div class="flex items-center gap-4">
-        <i class="fa-regular fa-bell"></i>
-         <div class="relative w-10 h-10 flex-shrink-0">
-          <i class="fa-solid fa-circle-user text-4xl text-white  "></i>
-        <img src="images/moctar.jpg" alt="photo" class="absolute inset-0 w-10 h-10 rounded-full object-cover">
-        </div>
-        <!-- <i class="fa-solid fa-circle-user"></i> -->
+      <a href="inscription.html">
+        <i class="fa-solid fa-arrow-right-from-bracket cursor-pointer"></i>
+      </a>
+    </div>
 
-        
-        <a href="inscription.html">
-          <i class="fa-solid fa-arrow-right-from-bracket cursor-pointer"></i>
-        </a>
-      </div>
-
-    </nav>
-  </div>
+  </nav>
+</div>
   <div class="m-2 flex justify-between items-center shadow-md h-[8vh]">
    <div>
      <h1 class="text-2xl pl-4"> Bienvenue sur RED product</h1>

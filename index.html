@@ -27,35 +27,52 @@
 
   <!-- NAVBAR -->
   <div class="px-8 flex justify-between items-center h-[70px] shadow-md ">
-        <i class="fa-solid fa-align-justify  md:hidden cursor-pointer" onclick="clique()"></i>
+    <i class="fa-solid fa-align-justify  md:hidden cursor-pointer" onclick="clique()"></i>
 
 
     <div id="logo" class="text-1xl font-bold hidden md:block">liste des hotels</div>
 
-    <nav class="flex items-center gap-8">
+    <div class="p-auto flex justify-between items-center relative">
 
-      <!-- SEARCH -->
-      <div class="flex relative w-[300px] h-[40px]">
-        <i class="fa-solid fa-magnifying-glass absolute left-3 top-3"></i>
-        <input type="text" placeholder="rechercher" class="bg-[#f5f5f5] w-full pl-10 rounded-full">
+  <nav class="flex items-center gap-4 md:gap-8">
+
+    <!-- Icône loupe sur mobile, barre complète sur desktop -->
+    <button
+      class="md:hidden text-gray-600"
+      onclick="document.getElementById('search-bar').classList.toggle('hidden')"
+    >
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+
+    <div class="hidden md:flex relative w-[300px] h-[40px]">
+      <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-gray-400"></i>
+      <input
+        type="text"
+        placeholder="rechercher"
+        class="bg-[#f5f5f5] w-full pl-10 rounded-full outline-none"
+      >
+    </div>
+
+    <!-- Icônes droite -->
+    <div class="flex items-center gap-3 md:gap-4">
+      <i class="fa-regular fa-bell"></i>
+
+      <div class="relative w-10 h-10 flex-shrink-0">
+        <i class="fa-solid fa-circle-user text-4xl text-white"></i>
+        <img
+          src="images/moctar.jpg"
+          alt="photo"
+          class="absolute inset-0 w-10 h-10 rounded-full object-cover"
+        >
       </div>
 
-      <!-- ICONS -->
-      <div class="flex items-center gap-4">
-        <i class="fa-regular fa-bell"></i>
-        <div class="relative w-10 h-10 flex-shrink-0">
-          <i class="fa-solid fa-circle-user text-4xl text-white  "></i>
-        <img src="images/moctar.jpg" alt="photo" class="absolute inset-0 w-10 h-10 rounded-full object-cover">
-        </div>
-        <!-- <i class="fa-solid fa-circle-user"></i> -->
+      <a href="inscription.html">
+        <i class="fa-solid fa-arrow-right-from-bracket cursor-pointer"></i>
+      </a>
+    </div>
 
-        <!-- CORRECTION -->
-        <a href="inscription.html">
-          <i class="fa-solid fa-arrow-right-from-bracket cursor-pointer"></i>
-        </a>
-      </div>
-
-    </nav>
+  </nav>
+</div>
   </div>
 
   <!-- HEADER -->
