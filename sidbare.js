@@ -13,7 +13,7 @@
   <ul class="w-full">
     <li class="text-xl text-black hover:bg-white hover:text-black rounded overflow-hidden">
   <a href="dashboard.html" class="nav-link flex items-center gap-2 w-full px-4 py-2">
-  <img src="images/Vector.png" alt="image"> 
+  <img src="images/Vector.png" alt="image" class="bg-white"> 
     
     Dashboard
   </a>
@@ -21,7 +21,7 @@
 
 <li class="text-xl text-white hover:bg-white hover:text-black rounded overflow-hidden">
   <a href="ajouter_produits.html" class="nav-link flex items-center gap-2 w-full px-4 py-2">
-  <img src="images/list.png" alt="image"> 
+  <img src="images/list.png" alt="image" class="w-5 h-5 group-hover:brightness-0 "> 
     
     Liste des hotels
   </a>
