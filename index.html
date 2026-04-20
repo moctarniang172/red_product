@@ -1,264 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
+    <!-- Permet à la page d'être responsive sur mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+    
+    <title>Connexion</title>
+
+    <!-- Import de Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
 </head>
-<body class="bg-[f5f5f5]">
 
-    <div class="flex flex-cols-2">
-        
-  <!-- SIDEBAR -->
-  <div class="bg-[#4c5053] w-[250px] h-screen fixed left-0 top-0  z-50  hidden md:block" id="sidbare">
-
-
-  
-<div id="enligne" class="flex flex">
-
-</div>
-
-  </div>
-        <!-- section 1 bare de navigation de la page connexion, inscription,et page mdp oblier -->
-    <div class="bg-[#f0f0f0]  w-full md:ml-[250px] min-h-screen shadow-md">
-
-  <!-- NAVBAR -->
-  <div class="px-8 flex justify-between items-center h-[70px] shadow-md ">
-    <i class="fa-solid fa-align-justify  md:hidden cursor-pointer" onclick="clique()"></i>
-
-
-    <div id="logo" class="text-1xl font-bold hidden md:block">liste des hotels</div>
-
-    <div class="p-auto flex justify-between items-center relative">
-
-  <nav class="flex items-center gap-4 md:gap-8">
-
-    <!-- Icône loupe sur mobile, barre complète sur desktop -->
-    <button
-      class="md:hidden text-gray-600"
-      onclick="document.getElementById('search-bar').classList.toggle('hidden')"
-    >
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </button>
-
-    <div class="hidden md:flex relative w-[300px] h-[40px]">
-      <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-gray-400"></i>
-      <input
-        type="text"
-        placeholder="rechercher"
-        class="bg-[#f5f5f5] w-full pl-10 rounded-full outline-none"
-      >
-    </div>
-
-    <!-- Icônes droite -->
-    <div class="flex items-center gap-3 md:gap-4">
-      <i class="fa-regular fa-bell"></i>
-
-      <div class="relative w-10 h-10 flex-shrink-0">
-        <i class="fa-solid fa-circle-user text-4xl text-white"></i>
-        <img
-          src="images/moctar.jpg"
-          alt="photo"
-          class="absolute inset-0 w-10 h-10 rounded-full object-cover"
-        >
-      </div>
-
-      <a href="inscription.html">
-        <i class="fa-solid fa-arrow-right-from-bracket cursor-pointer"></i>
-      </a>
-    </div>
-
-  </nav>
-</div>
-  </div>
-
-  <!-- HEADER -->
-  <div class="m-4 flex justify-between items-center">
-    <h1 class="text-2xl pl-4">Hotel</h1>
-
+<body class="h-screen flex items-center justify-center bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)),url('images/image-contact.png')]">
     
-    <bouton type="button" onclick="afficher()" class="bg-white border border-[#aeaeae] rounded-lg px-4 py-2 cursor-pointer"> + créer un nouvel hôtel</bouton>
-  </div>
+    <div class="w-[384px] max-w-md px-4 h-[597.5896606445312px]">
 
-   <!-- formulair d'ajout d'une hotel -->
+        <!-- TITRE -->
+        <div class="text-center text-white mb-6 flex items-center justify-center gap-4">
+            <img src="images/Link → SVG.png" alt="image"> 
+            <h1 class="text-2xl font-bold">RED PRODUCT</h1>
+        </div>
 
-   <form action="" class="hidden" id="formulaire">
-    <div class="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
+        <!-- CARD LOGIN -->
+        <div class="bg-white p-6 rounded-lg shadow-lg h-[50vh] ">
 
-  <!-- Carte du formulaire -->
-  <div class="bg-white rounded-2xl shadow-xl w-full max-w-lg p-6">
+            <p class="text-gray-600 mb-4 text-sm text-center">Connectez-vous en tant que Admin</p>
 
-    <!-- En-tête -->
-    <div class="flex items-center gap-2 mb-6 justify-between">
-      <button class="text-gray-400 hover:text-gray-600 transition"></button>
-      <h2 class="text-xs font-semibold tracking-widest uppercase text-gray-700">
-        Créer un nouveau hôtel
-      </h2>
+            <!-- FORMULAIRE -->
+            <form>
+                <div class="mb-4 h-[8vh]">
+            <input type="email" placeholder="E-mail" class="w-full border-b-2 border-gray-300 focus:border-gray-700 outline-none py-2">
+                   
+                </div>
+                  <div class="mb-4 h-[8vh]">
+                    <input  type="password" placeholder="Mot de passe" class="w-full border-b-2 border-gray-300 focus:border-gray-700 outline-none py-2" >
+                </div>
 
-       <button type="button" onclick="fermer()" id="ferme"><i class="fa-solid fa-xmark pr-[15%]"></i></button>
+                
+                <div class="flex items-center mb-4 h-[8vh]">
+                    <input type="checkbox" class="mr-2">
+                    <label class="text-sm text-gray-600">
+                        Gardez-moi connecté
+                    </label>
+                </div>
 
-    
+                <!-- BOUTON -->
+                <button type="submit" class="w-full bg-[#474a4d] text-white py-2 rounded hover:bg-gray-900 transition"><a href="ajouter_produits.html">
+                    Se connecter</a>
+                </button>
+
+            </form>
+        </div>
+
+
+        <div class="text-center mt-4 text-sm">
+            <a href="oblier.html" class="text-yellow-500 cursor-pointer">
+                Mot de passe oublié?
+            </a>
+
+            <p class="text-gray-300 mt-2">
+                Vous n'avez pas de compte?
+                <span class="text-yellow-500 cursor-pointer"><a href="inscription.html">S'inscrire</a></span>
+            </p>
+        </div>
+
     </div>
 
-    <!-- Ligne 1 : Nom + Adresse -->
-    <div class="grid grid-cols-2 gap-4 mb-4">
-      <div>
-        <label class="block text-xs text-gray-500 mb-1">Nom de l'hôtel</label>
-        <input type="text" placeholder="CAP Marinane" id="nom" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300" />
-      </div>
-      <div>
-        <label class="block text-xs text-gray-500 mb-1">Adresse</label>
-        <input type="text" placeholder="Adresse de l'hotel" id="adresse" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300" />
-      </div>
-    </div>
-
-    <!-- Ligne 2 : Email + Téléphone -->
-    <div class="grid grid-cols-2 gap-4 mb-4">
-      <div>
-        <label class="block text-xs text-gray-500 mb-1">E mail</label>
-        <input type="email" placeholder="votre adresse e-mail" id="mail" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300" />
-      </div>
-      <div>
-        <label class="block text-xs text-gray-500 mb-1">Numéro de téléphone</label>
-        <input type="tel" placeholder="telephone" id="telephone" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300" />
-      </div>
-    </div>
-
-    <!-- Ligne 3 : Prix + Devise -->
-    <div class="grid grid-cols-2 gap-4 mb-4">
-      <div>
-        <label class="block text-xs text-gray-500 mb-1">Prix par nuit</label>
-        <input type="number" placeholder="25 000" id="prix" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300" />
-      </div>
-      <div>
-        <label class="block text-xs text-gray-500 mb-1">Devise</label>
-        <select class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300 bg-white">
-          <option value="XOF">F XOF</option>
-          <option value="EUR">€ EUR</option>
-          <option value="USD">$ USD</option>
-        </select>
-      </div>
-    </div>
-
-    <!-- Zone upload photo -->
-    <div class="mb-6">
-      <label class="block text-xs text-gray-500 mb-1">Ajouter une photo</label>
-      <label class="flex flex-col items-center justify-center border-2 border-dashed border-gray-200 rounded-xl h-32 cursor-pointer hover:border-indigo-300 transition">
-      
-        <span class="text-xs text-gray-400">Ajouter une photo</span>
-        <input type="file" class="hidden" id="image" accept="image/*" />
-        <img id="apercu" class="hidden h-24 mt-2 object-cover rounded" />
-      </label>
-    </div>
-
-    <!-- Bouton Enregistrer -->
-    <div class="flex justify-end">
-      <button type="submit"  class="bg-gray-900 text-white text-sm font-medium px-6 py-2 rounded-lg hover:bg-gray-700 transition">
-        Enregistrer
-      </button>
-    </div>
-
-  </div>
-</div>
-</form>
-  <!-- GRID -->
-  <div class="p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6" id="liste">
-
-
-    <!-- CARD -->
-     <div class="bg-[#fafafa] rounded-xl overflow-hidden shadow">
-      <img src="images/image1.jpg" class="w-full h-[200px] object-cover">
-
-      <div class="p-4">
-        <p class="text-[#9b6150] text-sm">DAKAR</p>
-        <h1 class="font-bold text-xl">Lorem, ipsum dolor.</h1>
-        <h1 class="font-bold text-xl">Lorem, ipsum.</h1>
-        <p class="pt-2">Lorem ipsum dolor sit.</p>
-      </div>
-    </div>
-      <div class="bg-[#fafafa] rounded-xl overflow-hidden shadow">
-      <img src="images/image2.png" class="w-full h-[200px] object-cover">
-
-      <div class="p-4">
-        <p class="text-[#9b6150] text-sm">DAKAR</p>
-        <h1 class="font-bold text-xl">Lorem, ipsum dolor.</h1>
-        <h1 class="font-bold text-xl">Lorem, ipsum.</h1>
-        <p class="pt-2">Lorem ipsum dolor sit.</p>
-      </div>
-    </div>
-      <div class="bg-[#fafafa] rounded-xl overflow-hidden shadow">
-      <img src="images/image3.jpg" class="w-full h-[200px] object-cover">
-
-      <div class="p-4">
-        <p class="text-[#9b6150] text-sm">DAKAR</p>
-        <h1 class="font-bold text-xl">Lorem, ipsum dolor.</h1>
-        <h1 class="font-bold text-xl">Lorem, ipsum.</h1>
-        <p class="pt-2">Lorem ipsum dolor sit.</p>
-      </div>
-    </div>
-      <div class="bg-[#fafafa] rounded-xl overflow-hidden shadow">
-      <img src="images/image4.jpg" class="w-full h-[200px] object-cover">
-
-      <div class="p-4">
-        <p class="text-[#9b6150] text-sm">DAKAR</p>
-        <h1 class="font-bold text-xl">Lorem, ipsum dolor.</h1>
-        <h1 class="font-bold text-xl">Lorem, ipsum.</h1>
-        <p class="pt-2">Lorem ipsum dolor sit.</p>
-      </div>
-    </div>
-      <div class="bg-[#fafafa] rounded-xl overflow-hidden shadow">
-      <img src="images/image5.jpg" class="w-full h-[200px] object-cover">
-
-      <div class="p-4">
-        <p class="text-[#9b6150] text-sm">DAKAR</p>
-        <h1 class="font-bold text-xl">Lorem, ipsum dolor.</h1>
-        <h1 class="font-bold text-xl">Lorem, ipsum.</h1>
-        <p class="pt-2">Lorem ipsum dolor sit.</p>
-      </div>
-    </div>
-      <div class="bg-[#fafafa] rounded-xl overflow-hidden shadow">
-      <img src="images/image6.jpg" class="w-full h-[200px] object-cover">
-
-      <div class="p-4">
-        <p class="text-[#9b6150] text-sm">DAKAR</p>
-        <h1 class="font-bold text-xl">Lorem, ipsum dolor.</h1>
-        <h1 class="font-bold text-xl">Lorem, ipsum.</h1>
-        <p class="pt-2">Lorem ipsum dolor sit.</p>
-      </div>
-    </div>
-      <div class="bg-[#fafafa] rounded-xl overflow-hidden shadow">
-      <img src="images/image7.jpg" class="w-full h-[200px] object-cover">
-
-      <div class="p-4">
-        <p class="text-[#9b6150] text-sm">DAKAR</p>
-        <h1 class="font-bold text-xl">Lorem, ipsum dolor.</h1>
-        <h1 class="font-bold text-xl">Lorem, ipsum.</h1>
-        <p class="pt-2">Lorem ipsum dolor sit.</p>
-      </div>
-    </div>
-      <div class="bg-[#fafafa] rounded-xl overflow-hidden shadow">
-      <img src="images/image8.jpg" class="w-full h-[200px] object-cover">
-
-      <div class="p-4">
-        <p class="text-[#9b6150] text-sm">DAKAR</p>
-        <h1 class="font-bold text-xl">Lorem, ipsum dolor.</h1>
-        <h1 class="font-bold text-xl">Lorem, ipsum.</h1>
-        <p class="pt-2">Lorem ipsum dolor sit.</p>
-      </div>
-    </div>
-  </div>
-  <!-- <button onclick="effacer()">effacer</button> -->
-
-</div>
-      
-    </div>
-
-    <script src="sidbare.js"></script>
-
-    <script src="index.js"></script>
-    
 </body>
 </html>

@@ -1,59 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
+
+    <!-- Permet la responsivité sur mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-        <script src="https://cdn.tailwindcss.com"></script>
 
+    <title>Inscription Admin</title>
+
+    <!-- Import Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="h-screen bg-cover bg-center bg-no-repeat bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)),url('images/image-contact.png')]">
-    <div class="mx-auto flex justify-center text-white gap-4 mt-24">
-        <span class="inline-block w-[22px] h-[26px] bg-white mr-2 align-middle [clip-path:polygon(0%_0%,100%_0%,100%_100%,50%_78%,0%_100%)]"></span>
-         <h1>RED PRODUCT</h1>
+
+<body class="h-screen flex items-center justify-center bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)),url('images/image-contact.png')]">
+
+    <!-- CONTENEUR GLOBAL -->
+    <div class="w-full max-w-sm sm:max-w-md px-4">
+
+        <!-- TITRE -->
+        <div class="text-center text-white mb-6 flex items-center justify-center gap-4">
+            <img src="images/Link → SVG.png" alt="image"> 
+
+            <h1 class="text-2xl font-bold">RED PRODUCT</h1>
+          
+        </div>
+
+        <!-- CARD -->
+<div class="bg-white p-8 rounded-lg shadow-lg">
+
+    <p class="text-gray-800 mb-6 text-sm font-bold">
+        Inscrivez-vous en tant que Admin
+    </p>
+
+    <!-- FORMULAIRE -->
+    <form>
+
+        <!-- NOM -->
+        <div class="mb-6 h-[10vh]">
+            <input type="text" placeholder="Nom" class="w-full bg-transparent border-b border-gray-300 focus:border-gray-700 outline-none py-2 text-gray-700 placeholder-gray-400">
+        </div>
+
+        <!-- EMAIL -->
+        <div class="mb-6 h-[10vh]">
+            <input type="email" placeholder="E-mail" class="w-full bg-transparent border-b border-gray-300 focus:border-gray-700 outline-none py-2 text-gray-700 placeholder-gray-400">
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="mb-6 h-[10vh]">
+            <input type="password"  placeholder="Mot de passe" class="w-full bg-transparent border-b border-gray-300 focus:border-gray-700 outline-none py-2 text-gray-700 placeholder-gray-400">
+        </div>
+
+        <!-- CHECKBOX -->
+        <div class="flex items-center mb-6">
+            <input type="checkbox" id="terms" class="w-4 h-4 mr-3 accent-gray-700 cursor-pointer">
+            <label for="terms" class="text-sm text-gray-600 cursor-pointer">
+                Accepter les termes et la politique
+            </label>
+        </div>
+
+        <!-- BOUTON -->
+        <button class="w-full bg-[#474a4d] text-white py-3 rounded font-semibold hover:bg-gray-900 transition-colors duration-200 cursor-pointer"><a href="index.html">
+            S'inscrire</a>
+        </button>
+
+    </form>
+</div>
+
+        <!-- LIEN BAS -->
+        <div class="text-center mt-4 text-sm">
+            <p class="text-gray-300">
+                Vous avez déjà un compte ?
+             <span class="text-yellow-500 cursor-pointer"><a href="index.html">Se connecter</a></span>
+
+            </p>
+        </div>
+
     </div>
 
-    <div id="inscription" class=" mx-auto w-1/2 bg-[#f5f5f5] w-[384px] h-[55vh] mt-[4%] rounded-md">
-        <form action="" id="valider">
-            <div class="pt-4 text-center font-bold"><h1>Inscrivez-vous en tant que admin</h1></div>
-            <div class="mt-9  grid grid-cols-1 items-center gap-4">
-                <div class="pl-4 w-full h-[10vh] gap-4 border-b-2 border-black-500 pb-2" >
-                 <h1 class="">Nom</h1>
-                 <input type="text" value="" name="nom" id="nom" placeholder="Votre nom" class="w-full bg-[#f5f5f5] h-[7vh] hover:border-none outline-none  ">
-                </div>
-
-                 <div class="pl-4 w-full h-[10vh] gap-4 border-b-2 border-black-500 pb-2" >
-                 <h1 class="">E-mail</h1>
-                 <input type="email" value="" name="nom" id="nom" placeholder="Votre e-mail" class="w-full bg-[#f5f5f5] h-[7vh] hover:border-none outline-none ">
-                </div>
-
-                 <div class="pl-4 w-full h-[10vh] gap-4 border-b-2 border-black-500 pb-2" >
-                 <h1 class="">Mot de passe</h1>
-                 <input type="password" value="" name="nom" id="nom" placeholder="Votre mot de passe" class="w-full bg-[#f5f5f5] h-[7vh] hover:border-none outline-none ">
-                </div>
-
-                <div class="gap-4  flex justify-center" >
-                 <input type="checkbox" value="" name="nom" id="nom" class=" cursor-pointer">
-                 <h1 class="font-italic">Accepter les termes et la politique</h1>
-                </div>
-
-                <button type="submit" class="mx-auto bg-[#474a4d] rounded-md text-white mt-[-1%] w-[304px] h-[5vh]">S'inscrire</button>
-                 
-
-
-
-            </div>
-        </form>
-    </div>
-     
-    <!-- bouton se connecter -->
-     <div class="mx-auto flex justify-center text-white gap-4 mt-4">
-        <p>Vous avez déjà un compte </p>
-        <span><a href="contact.html" class="text-[#ffd964] font-bold">se connecter</a></span>
-
-
-
-     </div>
-    
 </body>
 </html>

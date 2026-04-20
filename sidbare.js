@@ -12,11 +12,20 @@
 
   <ul class="w-full">
     <li class="text-xl text-black hover:bg-white hover:text-black rounded overflow-hidden">
-      <a href="dashboard.html" class="nav-link block w-full px-4 py-2">dashboard</a>
-    </li>
-    <li class="text-xl text-white hover:bg-white hover:text-black rounded overflow-hidden">
-      <a href="index.html" class="nav-link block w-full px-4 py-2">liste des hotels</a>
-    </li>
+  <a href="dashboard.html" class="nav-link flex items-center gap-2 w-full px-4 py-2">
+  <img src="images/Vector.png" alt="image"> 
+    
+    Dashboard
+  </a>
+</li>
+
+<li class="text-xl text-white hover:bg-white hover:text-black rounded overflow-hidden">
+  <a href="ajouter_produits.html" class="nav-link flex items-center gap-2 w-full px-4 py-2">
+  <img src="images/list.png" alt="image"> 
+    
+    Liste des hotels
+  </a>
+</li>
   </ul>
    <div class="mt-[240%] flex items-center gap-3 justify-center">
   <div class="relative ">
