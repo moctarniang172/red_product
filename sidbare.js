@@ -4,8 +4,8 @@
   <div class="flex-1 w-full md:flex gap-4 mt-2 px-4 text-white">
     <i class="fa-solid fa-xmark pr-[15%] text-white md:hidden cursor-pointer" onclick="fermer2()"></i>
     <div class="m-4 flex justify-center gap-2 text-white">
-      <span class="inline-block w-[22px] h-[26px] bg-white mr-2 
-      [clip-path:polygon(0%_0%,100%_0%,100%_100%,50%_78%,0%_100%)]"></span>
+      <img src="images/Link → SVG.png" alt="image"> 
+
       <h1>RED PRODUCT</h1>
     </div>
   </div>
@@ -13,7 +13,7 @@
   <ul class="w-full">
     <li class="text-xl text-black hover:bg-white hover:text-black rounded overflow-hidden">
   <a href="dashboard.html" class="nav-link flex items-center gap-2 w-full px-4 py-2">
-  <img src="images/Vector.png" alt="image" class="bg-white"> 
+  <img src="images/iconne1.png" alt="image"> 
     
     Dashboard
   </a>
@@ -27,7 +27,7 @@
   </a>
 </li>
   </ul>
-   <div class="mt-[240%] flex items-center gap-3 justify-center">
+   <div class="mt-[220%] flex items-center gap-3 justify-center">
   <div class="relative ">
         <div class="flex items-center gap-3">
          <i class="fa-solid fa-circle-user text-4xl text-white"></i>
