@@ -4,8 +4,8 @@ const listedasboard = async ()=>{
        console.log("réponse dashboard :", res);
 
 if (res) {
-    document.getElementById("formulaire").textContent = res.totalmessage;
-    document.getElementById("hotel").textContent = res.totalhotel;
+    // document.getElementById("totalformulaire").textContent = res.totalmessage;
+    document.getElementById("total-hotel").textContent = res.totalhotel;
     document.getElementById("user").textContent = res.totaluser;
     document.getElementById("message").textContent = res.totalmessage;
     document.getElementById("email").textContent = res.totalemails;
