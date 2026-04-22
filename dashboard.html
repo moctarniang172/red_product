@@ -55,9 +55,9 @@
         >
       </div>
 
-      <a href="inscription.html">
-        <i class="fa-solid fa-arrow-right-from-bracket cursor-pointer"></i>
-      </a>
+      
+        <i onclick="logout()" class="fa-solid fa-arrow-right-from-bracket cursor-pointer"></i>
+    
     </div>
 
   </nav>
@@ -79,7 +79,7 @@
   <div class="p-4 bg-[#ffffff] rounded-md h-[15vh] flex items-center gap-4">
     <div class="bg-[#A88ADD] w-12 h-12 rounded-full p-3"><i class="fa-regular fa-envelope text-white "></i></div>    
     <div>
-      <h2 class=""><span class="text-[32px]">125</span>Formulaires</h2>
+      <h2 class=""><span id="formulaire" class="text-[32px]"></span>Formulaires</h2>
       <p class="text-sm text-gray-700">
         Lorem ipsum dolor sit amet.
     </p>
@@ -88,7 +88,7 @@
 <div class="p-4 bg-[#ffffff] rounded-md h-[15vh] flex items-center gap-4">
     <div class="bg-[#0cc2aa] w-12 h-12 rounded-full"><p class="mt-3 text-white font-bold text-center text-2xl ">P</p></div>    
      <div>
-      <h2 class=""><span class="text-[32px]">40</span>Messages</h2>
+      <h2 class=""><span id="message" class="text-[32px]"></span>Messages</h2>
       <p class="text-sm text-gray-700">
         Lorem ipsum dolor sit amet.
     </p>
@@ -97,7 +97,7 @@
 <div class="p-4 bg-[#ffffff] rounded-md h-[15vh] flex items-center gap-4">
     <div class="bg-[#f2cf52] w-12 h-12 rounded-full"><i class="fa-solid fa-users text-center m-4 text-white"></i></div>    
     <div>
-      <h2 class=""><span class="text-[32px]">600</span>Utilisateurs</h2>
+      <h2 class=""><span id="user" class="text-[32px]"></span>Utilisateurs</h2>
        <p class="text-sm text-gray-700">
         Lorem ipsum dolor sit amet.
     </p>
@@ -109,7 +109,7 @@
 <div class="p-4 bg-[#ffffff] rounded-md h-[15vh] flex items-center gap-4">
     <div class="bg-[#f90000] w-12 h-12 rounded-full p-3"><i class="fa-regular fa-envelope text-white "></i></div>    
     <div>
-      <h2 class=""><span class="text-[32px]">25</span>E-mails</h2>
+      <h2 class=""><span id="email" class="text-[32px]"></span>E-mails</h2>
       <p class="text-sm text-gray-700">
         Lorem ipsum dolor sit amet.
     </p>
@@ -118,7 +118,7 @@
 <div class="p-4 bg-[#ffffff] rounded-md h-[15vh] flex items-center gap-4">
     <div class="bg-[#9c27b0] w-12 h-12 rounded-full"><p class="mt-3 text-white font-bold text-center text-2xl ">P</p></div>    
      <div>
-      <h2 class=""><span class="text-[32px]">40</span>Hôtels</h2>
+      <h2 class=""><span id="hotel" class="text-[32px]"></span>Hôtels</h2>
       <p class="text-sm text-gray-700">
         Lorem ipsum dolor sit amet.
     </p>
@@ -127,7 +127,7 @@
 <div class="p-4 bg-[#ffffff] rounded-md h-[15vh] flex items-center gap-4">
     <div class="bg-[#3f24f2] w-12 h-12 rounded-full" id="user"><i class="fa-solid fa-users text-center m-4 text-white"></i></div>    
     <div>
-      <h2 class=""><span class="text-[32px]">02</span>Entités </h2>
+      <h2 class=""><span id="entite" class="text-[32px]"></span>Entités </h2>
       <p class="text-sm text-gray-700">
         Lorem ipsum dolor sit amet.
     </p>
@@ -139,7 +139,13 @@
     </div>
     
      </div>
-    <script src="index.js"></script>
+    
+     <script src="./blog-api/api.js"></script>
+    <script src="./blog-api/dashboard.js"></script>
+      <script src="index.js"></script>
     <script src="sidbare.js"></script>
+   
+   
+
 </body>
 </html>

@@ -61,9 +61,8 @@
         >
       </div>
 
-      <a href="inscription.html">
-        <i class="fa-solid fa-arrow-right-from-bracket cursor-pointer"></i>
-      </a>
+      <i onclick="logout()" class="fa-solid fa-arrow-right-from-bracket cursor-pointer"></i>
+
     </div>
 
   </nav>
@@ -72,7 +71,7 @@
 
   <!-- HEADER -->
   <div class="m-2 flex justify-between items-center h-[10vh] shadow-md">
-    <h1 class="text-2xl pl-4">Hotel <span class="text-gray-300">8</span> </h1>
+    <h1 class="text-2xl pl-4">Hotel <span id="hotel" class="text-gray-300"></span> </h1>
 
     
     <bouton type="button" onclick="afficher()" class="bg-white border border-[#aeaeae] rounded-lg px-4 py-2 cursor-pointer"> + créer un nouvel hôtel</bouton>
@@ -144,7 +143,7 @@
       <label class="flex flex-col items-center justify-center border-2 border-dashed border-gray-200 rounded-xl h-32 cursor-pointer hover:border-indigo-300 transition">
       
         <span class="text-xs text-gray-400">Ajouter une photo</span>
-        <input type="file" class="hidden" id="image" accept="image/*" />
+        <input type="file" class="hidden" id="images" accept="image/*" />
         <img id="apercu" class="hidden h-24 mt-2 object-cover rounded" />
       </label>
     </div>
@@ -161,95 +160,17 @@
 </form>
   <!-- GRID -->
   <div class="p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6" id="liste">
-
-
     <!-- CARD -->
-     <div class="bg-[#fafafa] rounded-xl overflow-hidden shadow">
-      <img src="images/image1.jpg" class="w-full h-[200px] object-cover">
-
-      <div class="p-4">
-        <p class="text-[#9b6150] text-sm">DAKAR</p>
-        <h1 class="font-bold text-xl">Lorem, ipsum dolor.</h1>
-        <h1 class="font-bold text-xl">Lorem, ipsum.</h1>
-        <p class="pt-2">Lorem ipsum dolor sit.</p>
-      </div>
-    </div>
-      <div class="bg-[#fafafa] rounded-xl overflow-hidden shadow">
-      <img src="images/image2.png" class="w-full h-[200px] object-cover">
-
-      <div class="p-4">
-        <p class="text-[#9b6150] text-sm">DAKAR</p>
-        <h1 class="font-bold text-xl">Lorem, ipsum dolor.</h1>
-        <h1 class="font-bold text-xl">Lorem, ipsum.</h1>
-        <p class="pt-2">Lorem ipsum dolor sit.</p>
-      </div>
-    </div>
-      <div class="bg-[#fafafa] rounded-xl overflow-hidden shadow">
-      <img src="images/image3.jpg" class="w-full h-[200px] object-cover">
-
-      <div class="p-4">
-        <p class="text-[#9b6150] text-sm">DAKAR</p>
-        <h1 class="font-bold text-xl">Lorem, ipsum dolor.</h1>
-        <h1 class="font-bold text-xl">Lorem, ipsum.</h1>
-        <p class="pt-2">Lorem ipsum dolor sit.</p>
-      </div>
-    </div>
-      <div class="bg-[#fafafa] rounded-xl overflow-hidden shadow">
-      <img src="images/image4.jpg" class="w-full h-[200px] object-cover">
-
-      <div class="p-4">
-        <p class="text-[#9b6150] text-sm">DAKAR</p>
-        <h1 class="font-bold text-xl">Lorem, ipsum dolor.</h1>
-        <h1 class="font-bold text-xl">Lorem, ipsum.</h1>
-        <p class="pt-2">Lorem ipsum dolor sit.</p>
-      </div>
-    </div>
-      <div class="bg-[#fafafa] rounded-xl overflow-hidden shadow">
-      <img src="images/image5.jpg" class="w-full h-[200px] object-cover">
-
-      <div class="p-4">
-        <p class="text-[#9b6150] text-sm">DAKAR</p>
-        <h1 class="font-bold text-xl">Lorem, ipsum dolor.</h1>
-        <h1 class="font-bold text-xl">Lorem, ipsum.</h1>
-        <p class="pt-2">Lorem ipsum dolor sit.</p>
-      </div>
-    </div>
-      <div class="bg-[#fafafa] rounded-xl overflow-hidden shadow">
-      <img src="images/image6.jpg" class="w-full h-[200px] object-cover">
-
-      <div class="p-4">
-        <p class="text-[#9b6150] text-sm">DAKAR</p>
-        <h1 class="font-bold text-xl">Lorem, ipsum dolor.</h1>
-        <h1 class="font-bold text-xl">Lorem, ipsum.</h1>
-        <p class="pt-2">Lorem ipsum dolor sit.</p>
-      </div>
-    </div>
-      <div class="bg-[#fafafa] rounded-xl overflow-hidden shadow">
-      <img src="images/image7.jpg" class="w-full h-[200px] object-cover">
-
-      <div class="p-4">
-        <p class="text-[#9b6150] text-sm">DAKAR</p>
-        <h1 class="font-bold text-xl">Lorem, ipsum dolor.</h1>
-        <h1 class="font-bold text-xl">Lorem, ipsum.</h1>
-        <p class="pt-2">Lorem ipsum dolor sit.</p>
-      </div>
-    </div>
-      <div class="bg-[#fafafa] rounded-xl overflow-hidden shadow">
-      <img src="images/image8.jpg" class="w-full h-[200px] object-cover">
-
-      <div class="p-4">
-        <p class="text-[#9b6150] text-sm">DAKAR</p>
-        <h1 class="font-bold text-xl">Lorem, ipsum dolor.</h1>
-        <h1 class="font-bold text-xl">Lorem, ipsum.</h1>
-        <p class="pt-2">Lorem ipsum dolor sit.</p>
-      </div>
-    </div>
+   
   </div>
   <!-- <button onclick="effacer()">effacer</button> -->
 
 </div>
       
     </div>
+       <script src="./blog-api/api.js"></script>
+    <script src="./blog-api/dashboard.js"></script>
+    <script src="./blog-api/hotel.js"></script>
     <script src="index.js"></script>
     <script src="sidbare.js"></script>
     

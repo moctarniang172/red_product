@@ -33,21 +33,21 @@
     </p>
 
     <!-- FORMULAIRE -->
-    <form>
+    <form id="register">
 
         <!-- NOM -->
         <div class="mb-6 h-[10vh]">
-            <input type="text" placeholder="Nom" class="w-full bg-transparent border-b border-gray-300 focus:border-gray-700 outline-none py-2 text-gray-700 placeholder-gray-400">
+            <input type="text" id="nom" value="" placeholder="Nom" class="w-full bg-transparent border-b border-gray-300 focus:border-gray-700 outline-none py-2 text-gray-700 placeholder-gray-400">
         </div>
 
         <!-- EMAIL -->
         <div class="mb-6 h-[10vh]">
-            <input type="email" placeholder="E-mail" class="w-full bg-transparent border-b border-gray-300 focus:border-gray-700 outline-none py-2 text-gray-700 placeholder-gray-400">
+            <input type="email" id="email" value="" placeholder="E-mail" class="w-full bg-transparent border-b border-gray-300 focus:border-gray-700 outline-none py-2 text-gray-700 placeholder-gray-400">
         </div>
 
         <!-- PASSWORD -->
         <div class="mb-6 h-[10vh]">
-            <input type="password"  placeholder="Mot de passe" class="w-full bg-transparent border-b border-gray-300 focus:border-gray-700 outline-none py-2 text-gray-700 placeholder-gray-400">
+            <input type="password" id="password" value="" placeholder="Mot de passe" class="w-full bg-transparent border-b border-gray-300 focus:border-gray-700 outline-none py-2 text-gray-700 placeholder-gray-400">
         </div>
 
         <!-- CHECKBOX -->
@@ -59,8 +59,8 @@
         </div>
 
         <!-- BOUTON -->
-        <button class="w-full bg-[#474a4d] text-white py-3 rounded font-semibold hover:bg-gray-900 transition-colors duration-200 cursor-pointer"><a href="index.html">
-            S'inscrire</a>
+        <button type="submit" class="w-full bg-[#474a4d] text-white py-3 rounded font-semibold hover:bg-gray-900 transition-colors duration-200 cursor-pointer">
+            S'inscrire
         </button>
 
     </form>
@@ -76,6 +76,11 @@
         </div>
 
     </div>
+    <script src="blog-api/api.js"></script>
+    <script src="blog-api/auth.js"></script>
+
 
 </body>
+<div id="toast" class="fixed top-5 right-5 z-50"></div>
+
 </html>
