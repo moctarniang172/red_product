@@ -43,3 +43,56 @@ if (connexion) {
         showToast(res.message || "Erreur de connexion", "error");
     });
 }
+
+// recuperation de mot de passe
+const mdpForm = document.getElementById("mdp");
+
+if (mdpForm) {
+    mdpForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const email = document.getElementById("email").value.trim();
+
+        const res = await request("/password", "POST", { email });
+          sessionStorage.setItem("resetEmail", email);
+
+        alert(res.message);
+
+        window.location.href = "code.html";
+    });
+};
+                //code envoyer via email
+const codeForm = document.getElementById("codeForm");
+if (codeForm) {
+  codeForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const code = document.getElementById("code").value;
+    const email = sessionStorage.getItem("email");
+
+    await request("/password/code", "POST", { email, code });
+
+    window.location.href = "newpassword.html";
+  });
+};
+
+
+                        // new password 
+const newpasswordForm = document.getElementById("newpasswordForm");
+if (newpasswordForm) {
+  newpasswordForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const password = document.getElementById("password").value;
+    const email = sessionStorage.getItem("email");
+
+    await request("/password/reset", "POST", { email, password });
+
+    sessionStorage.clear();
+    alert("mot de passe a ete modifier avec succe")
+
+    window.location.href = "index.html";
+  });
+}
+
+
