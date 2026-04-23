@@ -1,4 +1,4 @@
-const api = "https://ton-backend.onrender.com/api";
+const api = "https://backend-rect-product-1.onrender.com/api";
 
 const token = () => localStorage.getItem("token"); 
 
@@ -13,7 +13,7 @@ const request = async (url, method = "GET", data = null, isFormData = false) => 
     }
 
     const res = await fetch(api + url, {
-        method, // 
+        method, 
         headers,
         body: data ? (isFormData ? data : JSON.stringify(data)) : null 
     });
