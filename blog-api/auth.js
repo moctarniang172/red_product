@@ -70,7 +70,8 @@ if (codeForm) {
     const code = document.getElementById("code").value;
     const email = sessionStorage.getItem("email");
 
-    await request("/password/code", "POST", { email, code });
+    const res = await request("/password/code", "POST", { email, code });
+    sessionStorage.setItem("resetToken", res.resetToken)
 
     window.location.href = "newpassword.html";
   });
@@ -84,9 +85,10 @@ if (newpasswordForm) {
     e.preventDefault();
 
     const password = document.getElementById("password").value;
-    const email = sessionStorage.getItem("email");
+    const token = sessionStorage.getItem("resetToken");
+    // const email = sessionStorage.getItem("email");
 
-    await request("/password/reset", "POST", { email, password });
+    await request("/password/reset", "POST", { token, password });
 
     sessionStorage.clear();
     alert("mot de passe a ete modifier avec succe")

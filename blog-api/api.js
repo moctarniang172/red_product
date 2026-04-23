@@ -1,4 +1,4 @@
-const api = "http://localhost:3000/api";
+const api = "https://ton-backend.onrender.com/api";
 
 const token = () => localStorage.getItem("token"); 
 
