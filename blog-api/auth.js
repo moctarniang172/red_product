@@ -34,6 +34,7 @@ if (connexion) {
 
         if (res.token) {
             localStorage.setItem("token", res.token);
+            localStorage.setItem("nom_user", res.nom);
             showToast("Connexion réussie", "success");
             setTimeout(() => {
                  window.location.href = "dashboard.html"; 

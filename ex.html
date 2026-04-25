@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des hôtels</title>
+
+    <!-- Import TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- CONTAINER PRINCIPAL -->
+    <div class="flex h-screen">
+
+        <!-- SIDEBAR (MENU GAUCHE) -->
+        <div class="w-64 bg-gray-800 text-white flex flex-col justify-between">
+            
+            <!-- Partie haute du menu -->
+            <div>
+                <!-- Logo / Nom -->
+                <div class="p-4 text-lg font-bold border-b border-gray-700">
+                    RED PRODUCT
+                </div>
+
+                <!-- Menu -->
+                <ul class="mt-4">
+                    <li class="px-6 py-3 hover:bg-gray-700 cursor-pointer">
+                        dashboard
+                    </li>
+
+                    <!-- Active -->
+                    <li class="px-6 py-3 bg-gray-700 cursor-pointer">
+                        liste des hotels
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Profil en bas -->
+            <div class="p-4 border-t border-gray-700 flex items-center gap-3">
+                <img src="https://i.pravatar.cc/40" class="rounded-full w-10 h-10">
+                <div>
+                    <p class="text-sm font-semibold">Moctar Niang</p>
+                    <p class="text-xs text-green-400">● en ligne</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENU PRINCIPAL -->
+        <div class="flex-1 p-6">
+
+            <!-- HEADER -->
+            <div class="flex justify-between items-center mb-6">
+                
+                <!-- Titre -->
+                <h1 class="text-xl font-semibold">liste des hotels</h1>
+
+                <!-- Barre droite -->
+                <div class="flex items-center gap-4">
+
+                    <!-- Input recherche -->
+                    <input 
+                        type="text" 
+                        placeholder="rechercher"
+                        class="px-4 py-2 rounded-full border outline-none focus:ring-2 focus:ring-blue-400"
+                    >
+
+                    <!-- Avatar -->
+                    <img src="https://i.pravatar.cc/35" class="w-8 h-8 rounded-full">
+
+                    <!-- Bouton -->
+                    <button class="border px-4 py-2 rounded-lg hover:bg-gray-200">
+                        + créer un nouvel hôtel
+                    </button>
+                </div>
+            </div>
+
+            <!-- TITRE SECTION -->
+            <h2 class="text-lg font-semibold mb-4">Hotel</h2>
+
+            <!-- GRID DES CARTES -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- CARTE 1 -->
+                <div class="bg-white rounded-xl shadow overflow-hidden">
+                    
+                    <!-- Image -->
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" class="w-full h-40 object-cover">
+
+                    <!-- Contenu -->
+                    <div class="p-4">
+                        <p class="text-sm text-orange-500">dakar</p>
+                        <h3 class="font-bold text-lg">hotel1</h3>
+                        <p class="font-semibold">782770731</p>
+                        <p class="text-gray-600 mt-2">25000 / nuit</p>
+                    </div>
+                </div>
+
+                <!-- CARTE 2 -->
+                <div class="bg-white rounded-xl shadow overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa" class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <p class="text-sm text-orange-500">Dakar</p>
+                        <h3 class="font-bold text-lg">hotel2</h3>
+                        <p class="font-semibold">782770731</p>
+                        <p class="text-gray-600 mt-2">30000 / nuit</p>
+                    </div>
+                </div>
+
+                <!-- CARTE 3 -->
+                <div class="bg-white rounded-xl shadow overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb" class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <p class="text-sm text-orange-500">Dakar</p>
+                        <h3 class="font-bold text-lg">Amy</h3>
+                        <p class="font-semibold">782770731</p>
+                        <p class="text-gray-600 mt-2">2000 / nuit</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
