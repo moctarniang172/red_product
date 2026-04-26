@@ -28,7 +28,7 @@ function sidbare() {
             </a>
         </li>
     </ul>
-    <div class="mt-[220%] flex items-center gap-3 justify-center">
+    <div class="mt-[205%] flex items-center gap-3 justify-center">
         <div class="relative ">
             <div class="flex items-center gap-3">
                 <i class="fa-solid fa-circle-user text-4xl text-white"></i>
