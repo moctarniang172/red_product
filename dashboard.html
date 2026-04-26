@@ -14,6 +14,51 @@
      <div class="flex flex-cols-2">
      <!-- SIDEBAR -->
   <div class="bg-[#4c5053] w-[250px] h-[100vh]  fixed left-0 top-0 z-50 hidden md:block" id="sidbare">
+    <!-- Conteneur principal en Flexbox colonne qui prend toute la hauteur -->
+    <div class="flex flex-col h-screen">
+        
+        <!-- SECTION HAUT : Logo + Liens -->
+        <div class="flex-grow overflow-y-auto">
+            <div class="flex items-center justify-between px-4 py-6 text-white">
+                <div class="flex items-center gap-2">
+                    <img src="images/Link → SVG.png" alt="logo" class="w-8">
+                    <h1 class="font-bold text-lg">RED PRODUCT</h1>
+                </div>
+                <i class="fa-solid fa-xmark md:hidden text-2xl cursor-pointer" onclick="fermer2()"></i>
+            </div>
+
+            <ul class="w-full space-y-1 px-2" id="nav-container">
+  <li>
+    <a href="dashboard.html" class="nav-link flex items-center gap-2 w-full px-4 py-3  hover:bg-white hover:text-black rounded transition" onclick="setActive(this, 'dashboard')">
+      <img src="images/Vector.png" alt="icon" class="w-5"> Dashboard
+    </a>
+  </li>
+  <li>
+    <a href="ajouter_produits.html" class="nav-link flex items-center gap-2 w-full px-4 py-3 text-white hover:bg-white hover:text-black  rounded transition" onclick="setActive(this, 'liste')">
+      <img src="images/list.png" alt="icon" class="w-5"> Liste des hôtels
+    </a>
+  </li>
+           </ul>
+
+        </div>
+
+        <!-- SECTION BAS : Profil (Fixé en bas) -->
+        <div class="p-4 border-t border-white/10">
+            <div class="flex items-center gap-3">
+                <div class="relative w-10 h-10 flex-shrink-0">
+                    <i class="fa-solid fa-circle-user text-4xl text-gray-400"></i>
+                    <img src="images/moctar.jpg" alt="photo" class="absolute inset-0 w-full h-full rounded-full object-cover border border-white/20">
+                </div>
+                <div class="overflow-hidden">
+                    <p id="non"></p>
+                    <div id="ligne">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <div id="enligne"></div>
   </div>
