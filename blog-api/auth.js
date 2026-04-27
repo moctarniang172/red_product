@@ -32,8 +32,9 @@ if (connexion) {
 
         const res = await request("/auth/connexion", "POST", { email, password });
 
-        if (res.token) {
+        if (res && res.token) {
             localStorage.setItem("token", res.token);
+            localStorage.setItem("id_user", res.id)
             localStorage.setItem("nom_user", res.nom);
             showToast("Connexion réussie", "success");
             setTimeout(() => {
