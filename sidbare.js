@@ -83,11 +83,11 @@ function fermer2(){
     
     // 2. Retirer la classe de fond actif de tous les liens
     links.forEach(link => {
-        link.classList.remove('bg-white', 'font-bold');
+        link.classList.remove('bg-white','w-full', 'font-bold');
     });
 
     // 3. Ajouter la classe au lien sur lequel on a cliqué
-    element.classList.add('bg-white/20', 'font-bold', 'text-black');
+    element.classList.add('bg-white/20','w-full', 'font-bold', 'text-black');
 
     // 4. Appeler votre fonction show() existante
     show(section);
