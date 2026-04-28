@@ -34,7 +34,45 @@ if (hotel) {
         }
         alert(res.message || "Erreur lors de l'ajout");
     });
-} 
+};
+
+
+     //===============filtre hotel====================
+
+// ========== FILTRE HOTEL ==========
+const input = document.getElementById("inpute");
+
+if (input) {
+    input.addEventListener("input", async function () {
+
+        const value = input.value.toLowerCase();
+
+        // récupérer les hôtels
+        const hotels = await request("/hotels");
+
+        // filtrer les hôtels
+        const resultats = hotels.filter(function (hotel) {
+            return hotel.nom.toLowerCase().includes(value);
+        });
+
+        // afficher les résultats filtrés
+        const html = resultats.map(function (element) {
+            return `
+            <div class="bg-[#fafafa] rounded-xl overflow-hidden shadow">
+                <img src="${element.images}" class="w-full h-[200px] object-cover" alt="${element.nom}">
+                <div class="p-4">
+                    <h1 class="font-bold text-xl">${element.nom}</h1>
+                    <p>${element.adresse}</p>
+                    <p>${element.email}</p>
+                    <p class="pt-2">${element.prix} ${element.devise}</p>
+                </div>
+            </div>
+            `;
+        });
+
+        document.getElementById("liste").innerHTML = html.join("");
+    });
+}   
 
 // ========== AFFICHAGE HOTELS ==========
 const affichage = async () => {
