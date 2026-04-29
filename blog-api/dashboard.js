@@ -14,4 +14,27 @@ if (res) {
 }
 }
 
+// ========== AFFICHER PROFIL ==========
+const afficherProfil = async () => {
+    const res = await request("/auth/profil", "GET");
+
+    if (res && res.user) {
+        const { nom, images } = res.user;
+
+        // Nom dans la sidebar
+        const nomEl = document.getElementById("non");
+        if (nomEl) nomEl.textContent = nom;
+
+        // Photo sidebar
+        const photoSidebar = document.getElementById("photo-sidebar");
+        if (photoSidebar && images) photoSidebar.src = images;
+
+        // Photo navbar
+        const photoNavbar = document.getElementById("photo-navbar");
+        if (photoNavbar && images) photoNavbar.src = images;
+    }
+};
+
+afficherProfil();
+
 listedasboard()
