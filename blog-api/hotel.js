@@ -75,17 +75,10 @@ if (input) {
 }   
 
 // ========== AFFICHAGE HOTELS ==========
-const affichage = async () => {
-    const hotels = await request("/hotels");
-
-    if (!hotels || hotels.length === 0) {
-        document.getElementById("liste").innerHTML = "<p>Aucun hôtel trouvé.</p>";
-        return;
-    }
-
-    const parcourir = hotels.map(function(element) {
-        return `
-        <div class="bg-[#fafafa] rounded-xl overflow-hidden shadow">
+const html = resultats.map(function (element) {
+    return `
+    <a href="detail.html?id=${element._id}">
+        <div class="bg-[#fafafa] rounded-xl overflow-hidden shadow cursor-pointer hover:scale-105 transition">
             <img src="${element.images}" class="w-full h-[200px] object-cover" alt="${element.nom}">
             <div class="p-4">
                 <h1 class="font-bold text-xl">${element.nom}</h1>
@@ -94,12 +87,11 @@ const affichage = async () => {
                 <p class="pt-2">${element.prix} ${element.devise}</p>
             </div>
         </div>
-        `;
-    });
-
-    document.getElementById("liste").innerHTML = parcourir.join("");
-};
+    </a>
+    `;
+});
 
 if (document.getElementById("liste")) {
     affichage(); 
 }
+
