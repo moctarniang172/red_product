@@ -75,8 +75,16 @@ if (input) {
 }   
 
 // ========== AFFICHAGE HOTELS ==========
-const html = resultats.map(function (element) {
-    return `
+const affichage = async () => {
+    const hotels = await request("/hotels");
+
+    if (!hotels || hotels.length === 0) {
+        document.getElementById("liste").innerHTML = "<p>Aucun hôtel trouvé.</p>";
+        return;
+    }
+
+    const parcourir = hotels.map(function(element) {
+        return `
     <a href="detail.html?id=${element._id}">
         <div class="bg-[#fafafa] rounded-xl overflow-hidden shadow cursor-pointer hover:scale-105 transition">
             <img src="${element.images}" class="w-full h-[200px] object-cover" alt="${element.nom}">
@@ -85,13 +93,51 @@ const html = resultats.map(function (element) {
                 <p>${element.adresse}</p>
                 <p>${element.email}</p>
                 <p class="pt-2">${element.prix} ${element.devise}</p>
+                 <!-- Modifier -->
+                    <button 
+                        onclick="editHotel('${element._id}')"
+                        class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-full shadow">
+                        <i class="fa-solid fa-pencil"></i>
+                    </button>
+
+                    <!-- Supprimer -->
+                    <button onclick="deleteHotel('${element._id}')" class="bg-black hover:bg-black0 text-white p-2 rounded-full shadow">
+                        <i class="fa-solid fa-basket-shopping "></i>
+                    </button>
             </div>
         </div>
     </a>
     `;
-});
+    });
+
+    document.getElementById("liste").innerHTML = parcourir.join("");
+};
+// const html = resultats.map(function (element) {
+
+//         const hotels = await request("/hotels");
+
+//     if (!hotels || hotels.length === 0) {
+//         document.getElementById("liste").innerHTML = "<p>Aucun hôtel trouvé.</p>";
+//         return;
+//     }
+
+//     return `
+//     <a href="detail.html?id=${element._id}">
+//         <div class="bg-[#fafafa] rounded-xl overflow-hidden shadow cursor-pointer hover:scale-105 transition">
+//             <img src="${element.images}" class="w-full h-[200px] object-cover" alt="${element.nom}">
+//             <div class="p-4">
+//                 <h1 class="font-bold text-xl">${element.nom}</h1>
+//                 <p>${element.adresse}</p>
+//                 <p>${element.email}</p>
+//                 <p class="pt-2">${element.prix} ${element.devise}</p>
+//             </div>
+//         </div>
+//     </a>
+//     `;
+// });
 
 if (document.getElementById("liste")) {
     affichage(); 
 }
+
 

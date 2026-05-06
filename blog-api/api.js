@@ -1,5 +1,5 @@
-// const api = "https://backend-rect-product-1.onrender.com/api";
-const api = "http://localhost:3000/api";
+const api = "https://backend-rect-product-1.onrender.com/api";
+
 
 
 const token = () => localStorage.getItem("token"); 
