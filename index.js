@@ -6,6 +6,8 @@ function afficher(){
 
 
 
+
+
  function fermer(){
     document.getElementById("formulaire").classList.add("hidden")
  }
