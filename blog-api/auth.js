@@ -1,3 +1,4 @@
+
 // ========== INSCRIPTION ==========
 const register = document.getElementById("register");
 
@@ -12,15 +13,19 @@ if (register) {
         const res = await request("/auth/inscription", "POST",{ nom, email, password });
 
         if (res) { 
-            showToast("Inscription réussie", "success");
-            setTimeout(() => { window.location.href = "index.html"; }, 1000);
-            return;
-        }
+    showToast("Vérifiez votre email pour activer votre compte", "success");
+    return;
+}
         showToast(res.message || "Erreur d'inscription", "error");
     });
 }
 
 // ========== CONNEXION ==========
+const params = new URLSearchParams(window.location.search);
+
+if (params.get("activated")) {
+    showToast("Compte activé avec succès !", "success");
+}
 const connexion = document.getElementById("connexion");
 
 if (connexion) {

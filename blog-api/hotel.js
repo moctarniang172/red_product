@@ -203,7 +203,7 @@ document.getElementById("images").addEventListener("change", function (e) {
 
 //faire la modification
 
-const up = document.getElementById("btn-submit-edit");
+const up = document.getElementById("update");
 if(up){
     up.addEventListener("submit", async function(e){
         e.preventDefault();
